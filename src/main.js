@@ -58,6 +58,8 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  // 将创建的共享数据对象，挂载到Vue实例中
+  // 所有的组件，就可以直接从 store 中获取全局的数据了
   store,
   render: h => h(App)
 }).$mount('#app')

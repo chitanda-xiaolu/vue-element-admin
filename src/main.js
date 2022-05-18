@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'; // element 默认主题样式
+import './styles/element-variables.scss'
 import enLang from 'element-ui/lib/locale/lang/en'
 
 import Cookies from 'js-cookie'

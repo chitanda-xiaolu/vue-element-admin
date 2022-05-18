@@ -17,6 +17,7 @@
 <script>
 // import RightPanel from '@components/RightPanel'
 import { AppMain, Navbar, Settings, Sidebar, TagsView } from './components'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Layout',
@@ -32,8 +33,20 @@ export default {
    */
   // mixins: [ResizeMixin],
   computed: {
+    ...mapState({
+      sidebar: state => state.app.sidebar,
+      device: state => state.app.device,
+      showSettings: state => state.settings.showSettings,
+      needTagsView: state => state.settings.TagsView,
+      fixedHeader: state => state.settings.fixedHeader
+    }),
     classObj() {
-      return null
+      return {
+        hideSidebar: !this.sidebar.opened,
+        openSidebar: this.sidebar.opened,
+        withoutAnimation: this.sdiebar.withoutAnimation,
+        mobile: this.device === 'mobile'
+      }
     }
   },
   methods: {

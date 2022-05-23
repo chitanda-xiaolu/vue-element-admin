@@ -19,7 +19,7 @@ import Cookies from 'js-cookie'
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 
-// import '@/styles/index.scss'
+import '@/styles/index.scss'
 
 // import App from './App'
 // import store from './store'
@@ -64,3 +64,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
